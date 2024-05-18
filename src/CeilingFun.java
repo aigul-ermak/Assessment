@@ -24,6 +24,10 @@ public class CeilingFun {
     }
 
     public void increaseSpeedCord() {
-        speed++;
+        if (speed >= 3) {
+            speed = 0;
+        } else {
+            speed++;
+        }
     }
 }

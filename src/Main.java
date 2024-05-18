@@ -1,22 +1,17 @@
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         CeilingFun ceilingFun = new CeilingFun(0,false);
-        System.out.println("Instruction to use Ceiling Fun. Press 'e' to quit");
+
         while(true) {
             System.out.println("Current Speed: " + ceilingFun.getSpeed());
+            System.out.println("Do you want to increase speed? Press 'y' or 'n'");
+
             String inputUser = sc.nextLine().toLowerCase();
 
-            if(inputUser.equals("e")) {
-                System.out.println("Instruction left");
-                break;
-            }
-
-            System.out.println("Do you want to increase speed? Press 'y' or 'n'");
 
             if (inputUser.equals("y")) {
                  ceilingFun.increaseSpeedCord();
