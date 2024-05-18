@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        CeilingFun ceilingFun = new CeilingFun(0, true);
+        CeilingFun ceilingFun = new CeilingFun();
 
         System.out.println("Ceiling Fun Control");
         System.out.println("Press 'y' to increase speed, 'r' to reverse direction, 'e' to exit.");
