@@ -12,7 +12,6 @@ public class Main {
         while (true) {
             System.out.println("Current Speed: " + ceilingFun.getSpeed() + ", Direction: " + (ceilingFun.isForward() ? "Forward" : "Reverse"));
 
-
             String inputUser = sc.nextLine().toLowerCase();
 
 

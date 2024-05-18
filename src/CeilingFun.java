@@ -63,7 +63,7 @@ public class CeilingFun {
     }
 
     private boolean isChristmas() {
-        LocalDate today = LocalDate.now();
+        LocalDate today =  LocalDate.of(2024, 12, 25); // LocalDate.now();
         return today.getMonthValue() == 12 && today.getDayOfMonth() == 25;
     }
 
