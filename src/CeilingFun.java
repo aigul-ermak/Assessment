@@ -22,4 +22,8 @@ public class CeilingFun {
     public void setForward(boolean forward) {
         isForward = forward;
     }
+
+    public void increaseSpeedCord() {
+        speed++;
+    }
 }
