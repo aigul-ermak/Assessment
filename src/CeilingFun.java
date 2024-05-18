@@ -1,18 +1,30 @@
 public class CeilingFun {
-    private int speed;
+    private int[] speeds = {0, 1, 2, 3};
+    private int speedIndex = 0;
     private boolean isForward;
 
-    public CeilingFun(int speed, boolean isForward) {
-        this.speed = speed;
+    public CeilingFun(int speedIndex, boolean isForward) {
+        this.speedIndex = speedIndex;
         this.isForward = isForward;
     }
-
     public int getSpeed() {
-        return speed;
+        return speeds[speedIndex];
     }
 
-    public void setSpeed(int speed) {
-        this.speed = speed;
+    public int[] getSpeeds() {
+        return speeds;
+    }
+
+    public void setSpeeds(int[] speeds) {
+        this.speeds = speeds;
+    }
+
+    public int getSpeedIndex() {
+        return speedIndex;
+    }
+
+    public void setSpeedIndex(int speedIndex) {
+        this.speedIndex = speedIndex;
     }
 
     public boolean isForward() {
@@ -24,10 +36,23 @@ public class CeilingFun {
     }
 
     public void increaseSpeedCord() {
-        if (speed >= 3) {
-            speed = 0;
+        if (isForward) {
+            if (speedIndex < speeds.length - 1) {
+                speedIndex++;
+            } else {
+                speedIndex = 0;
+            }
         } else {
-            speed++;
+            if (speedIndex > 0) {
+                speedIndex--;
+            } else {
+                speedIndex = speeds.length - 1;
+            }
         }
     }
+
+    public void toggleDirection() {
+        isForward = !isForward;
+    }
+
 }
