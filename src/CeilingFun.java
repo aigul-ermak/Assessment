@@ -1,10 +1,10 @@
 public class CeilingFun {
     private int speed;
-    private boolean isIncrease;
+    private boolean isForward;
 
-    public CeilingFun(int speed, boolean isIncrease) {
+    public CeilingFun(int speed, boolean isForward) {
         this.speed = speed;
-        this.isIncrease = isIncrease;
+        this.isForward = isForward;
     }
 
     public int getSpeed() {
@@ -15,11 +15,11 @@ public class CeilingFun {
         this.speed = speed;
     }
 
-    public boolean isIncrease() {
-        return isIncrease;
+    public boolean isForward() {
+        return isForward;
     }
 
-    public void setIncrease(boolean increase) {
-        isIncrease = increase;
+    public void setForward(boolean forward) {
+        isForward = forward;
     }
 }
