@@ -4,8 +4,10 @@ public class CeilingFun {
     private int[] speeds = {0, 1, 2, 3};
     private int speedIndex = 0;
     private boolean isForward = true;
+    private LocalDate currentDate;
 
-    public CeilingFun() {
+    public CeilingFun(LocalDate currentDate) {
+        this.currentDate = currentDate;
         if (isChristmas()) {
             speedIndex = 0;
         }
@@ -62,9 +64,15 @@ public class CeilingFun {
         }
     }
 
+    public void setCurrentDate(LocalDate date) {
+        this.currentDate = date;
+        if (isChristmas()) {
+            speedIndex = 0;
+        }
+    }
+
     private boolean isChristmas() {
-        LocalDate today =  LocalDate.of(2024, 12, 25); // LocalDate.now();
-        return today.getMonthValue() == 12 && today.getDayOfMonth() == 25;
+        return currentDate.getMonthValue() == 12 && currentDate.getDayOfMonth() == 25;
     }
 
 }
