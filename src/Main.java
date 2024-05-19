@@ -6,6 +6,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         LocalDate today = LocalDate.now();
+
+        // Set date like 25 December 2024
         //LocalDate today = LocalDate.of(2024, 12, 25);
 
         CeilingFun ceilingFun = new CeilingFun(today);
@@ -23,13 +25,13 @@ public class Main {
 
             switch (inputUser) {
                 case "y":
-                    ceilingFun.increaseSpeedCord();
+                    ceilingFun.changeSpeedCord();
                     System.out.println("Speed increased to: " + ceilingFun.getSpeed());
                     break;
                 case "r":
                     ceilingFun.toggleDirection();
                     System.out.println("Direction changed to: " + (ceilingFun.isForward() ? "Forward" : "Reverse"));
-                    ceilingFun.increaseSpeedCord();
+                    ceilingFun.changeSpeedCord();
                     break;
                 case "e":
                     System.out.println("Exit from Ceiling Fun Control system");

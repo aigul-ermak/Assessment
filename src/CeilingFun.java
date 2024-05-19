@@ -40,7 +40,8 @@ public class CeilingFun {
         isForward = forward;
     }
 
-    public void increaseSpeedCord() {
+    //  Changes the speed index based on the current direction, except on Christmas Day
+    public void changeSpeedCord() {
         if (!isChristmas()) {
             if (isForward) {
                 if (speedIndex < speeds.length - 1) {
@@ -58,19 +59,15 @@ public class CeilingFun {
         }
     }
 
+    // Toggles the direction unless it's Christmas Day
     public void toggleDirection() {
         if (!isChristmas()) {
             isForward = !isForward;
         }
     }
 
-    public void setCurrentDate(LocalDate date) {
-        this.currentDate = date;
-        if (isChristmas()) {
-            speedIndex = 0;
-        }
-    }
 
+    // Checks if the current date is Christmas Day
     private boolean isChristmas() {
         return currentDate.getMonthValue() == 12 && currentDate.getDayOfMonth() == 25;
     }
